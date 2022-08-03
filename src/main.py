@@ -113,3 +113,92 @@ feedback_avg_d5            15733 non-null   float64
 "program_family_price_type", "program_family_main_direction_id",
 "program_type", "program_starting_soon",
 "current_program_starts_on_day", "current_program_starts_on_month", "current_program_starts_on_year",
+
+
+
+
+
+
+
+
+
+
+
+	             value
+cart_timestamp	0.145832
+student_id	0.138987
+price	0.110682
+control_month	0.106075
+age_indicator	0.094287
+program_id	0.063316
+current_program_starts_on_timestamp	0.049848
+m_was_conversations	0.030697
+feedback_avg_d1	0.030076
+ABC	0.029196
+program_family_main_direction_id	0.022255
+support_feedback_avg	0.020665
+promo	0.019610
+feedback_avg_d3	0.017870
+feedback_avg_d4	0.017333
+feedback_avg_d5	0.015385
+program_starting_soon	0.015291
+control_year	0.012839
+bought_avg_duration	0.012748
+program_type	0.012618
+feedback_avg_d2	0.011626
+p_was_conversations	0.010753
+bought_d1	0.004154
+bought_d5	0.002790
+bought_d3	0.002160
+bought_d2	0.001464
+bought_d4	0.001443
+
+
+
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 200000 entries, 0 to 199999
+Data columns (total 28 columns):
+ #   Column                               Non-Null Count   Dtype
+---  ------                               --------------   -----
+ 0   program_id                           200000 non-null  int64
+ 1   price                                200000 non-null  float64
+ 2   cart_timestamp                       200000 non-null  float64
+ 3   control_month                        200000 non-null  int64
+ 4   student_id                           200000 non-null  int64
+ 5   age_indicator                        159123 non-null  float64
+ 6   feedback_avg_d1                      48496 non-null   float64
+ 7   feedback_avg_d3                      17778 non-null   float64
+ 8   feedback_avg_d5                      15733 non-null   float64
+ 9   feedback_avg_d4                      25076 non-null   float64
+ 10  feedback_avg_d2                      14805 non-null   float64
+ 11  control_year                         200000 non-null  int64
+ 12  support_feedback_avg                 37557 non-null   float64
+ 13  ABC                                  200000 non-null  int64
+ 14  promo                                200000 non-null  int64
+ 15  bought_d1                            200000 non-null  int64
+ 16  bought_d2                            200000 non-null  int64
+ 17  bought_d3                            200000 non-null  int64
+ 18  bought_d4                            200000 non-null  int64
+ 19  bought_d5                            200000 non-null  int64
+ 20  bought_avg_duration                  10359 non-null   float64
+ 21  m_was_conversations                  51537 non-null   float64
+ 22  p_was_conversations                  16453 non-null   float64
+ 23  program_family_main_direction_id     200000 non-null  int64
+ 24  program_type                         200000 non-null  int64
+ 25  program_starting_soon                200000 non-null  int64
+ 26  current_program_starts_on_timestamp  188693 non-null  float64
+ 27  target                               200000 non-null  int64
+
+
+"age_indicator",
+"feedback_avg_d1",
+"feedback_avg_d3",
+"feedback_avg_d5",
+"feedback_avg_d4",
+"feedback_avg_d2 ",
+"support_feedback_avg",
+"bought_avg_duration",
+"m_was_conversations",
+"p_was_conversations",
+"current_program_starts_on_timestamp",
