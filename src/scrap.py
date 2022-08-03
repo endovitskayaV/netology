@@ -62,11 +62,11 @@ def add_program_data(row):
     return row
 
 
-content = requests.get("https://netology.ru/backend/api/programs", headers=headers).content.decode()
-data = json.loads(content)
-programs = dict([(d['id'], d) for d in data])
+# content = requests.get("https://netology.ru/backend/api/programs", headers=headers).content.decode()
+# data = json.loads(content)
+# programs = dict([(d['id'], d) for d in data])
 
-df = pd.read_csv("../content/train.csv")
+df = pd.read_csv("../content/train_enriched.csv")
 
 program_ids = df.program_id.unique()
 program_id_to_data = {}
