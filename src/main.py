@@ -109,3 +109,7 @@ feedback_avg_d5            15733 non-null   float64
        1256, 1522, 1551, 2513, 2190, 2055,  708, 2704, 1984, 1995, 2066,
        2234, 2636, 2571, 2562, 2401, 2456, 2235, 2426, 2611, 2598, 2407,
        2699, 2515, 2714
+
+"program_family_price_type", "program_family_main_direction_id",
+"program_type", "program_starting_soon",
+"current_program_starts_on_day", "current_program_starts_on_month", "current_program_starts_on_year",

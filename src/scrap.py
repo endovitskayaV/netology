@@ -18,9 +18,8 @@ headers = {
     'cookie': 'http_x_authentication=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4MTc3MjEyfQ.qVS7cmXl8UZNUH8VxkoA6z3mAIVhyzb0px5CDDY6BVc'}
 
 
-def scrap_data(row):
-    program_id = row['program_id']
-    id = row['id']
+def scrap_data(program_id):
+    row = {}
     try:
         content = requests.get("https://netology.ru/backend/api/program_families/" + str(program_id),
                                headers=headers).content.decode()
@@ -54,9 +53,27 @@ def scrap_data(row):
     return row
 
 
+def add_program_data(row):
+    program_id = row["program_id"]
+    if program_id in program_id_to_data.keys():
+        data = program_id_to_data[program_id]
+        for key, value in data.items():
+            row[key] = value
+    return row
+
+
 content = requests.get("https://netology.ru/backend/api/programs", headers=headers).content.decode()
 data = json.loads(content)
 programs = dict([(d['id'], d) for d in data])
+
 df = pd.read_csv("../content/train.csv")
-df = df.apply(lambda row: scrap_data(row), axis=1)
-df.to_csv("../content/train_enriched.csv")
+
+program_ids = df.program_id.unique()
+program_id_to_data = {}
+
+for program_id in program_ids:
+    data = scrap_data(program_id)
+    program_id_to_data[program_id] = data
+
+df = df.apply(lambda row: add_program_data(row), axis=1)
+df.to_csv("../content/train_enriched.csv", index=False)
